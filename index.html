@@ -10,17 +10,17 @@
   </head>
   <body>
     <div id="intro">
+      <audio src="/public/songs/labete.mp3" autoplay></audio>
       <video id="video-intro" autoplay muted>
         <source src="/public/labete.mp4">
       </video>
-      <audio class="songs" src="/public/songs/labete.mp3" autoplay></audio>
     </div>
     <script>
       const videoIntro = document.getElementById("video-intro");
 
       videoIntro.addEventListener("ended", ()=>{
           console.log("Vidéo d'introduction terminée.")
-          window.location.href = '/labete.html'
+          window.location.href = '/pages/labete.html'
       });
     </script>
   </body>
