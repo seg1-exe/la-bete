@@ -5,16 +5,16 @@
     --pink: #FC78A9;
 }
 
+@font-face {
+    font-family: "LABETE";
+    src: url(/public/Regional/Regional-ExtraLightCondensed.otf) format("opentype");
+}
+
 body{
     background-color: var(--white);
     font-family: LABETE, serif;
     color: var(--grey);
     overflow-x: hidden;
-}
-
-@font-face {
-    font-family: "LABETE";
-    src: url(/public/Regional/Regional-ExtraLightCondensed.otf) format("opentype");
 }
 
 h1{
