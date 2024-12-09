@@ -3,18 +3,42 @@
     --white: #FDFDFB;
     --blue: #1C80D5;
     --pink: #FC78A9;
+    --black: #000;
 }
 
 @font-face {
-    font-family: "LABETE";
+    font-family: "Regional";
     src: url(/Regional/Regional-ExtraLightCondensed.otf) format("opentype");
 }
 
 body{
     background-color: var(--white);
-    font-family: LABETE, serif;
+    font-family: Regional, serif;
     color: var(--grey);
     overflow-x: hidden;
+}
+
+#checkup-door{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: no-repeat url('/hollow2.png');
+    background-size: cover;
+}
+
+#checkup-door>button{
+    padding: 0px 50px;
+    font-size: 12rem;
+    font-family: Regional, serif;
+    background: transparent;
+    border: none;
+    color: var(--grey);
+}
+
+#checkup-door>button:hover{
+    cursor: pointer;
 }
 
 h1{

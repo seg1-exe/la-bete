@@ -10,15 +10,27 @@
     <title>La Bête</title>
   </head>
   <body>
-    <audio src="/public/songs/labete.mp3" autoplay></audio>
-    <div id="intro">
-      <video id="video-intro" autoplay muted>
+    <div id="checkup-door">
+      <button id="checkup-button">ENTER</button>
+    </div>
+    <div id="intro" style="display: none;">
+      <video id="video-intro">
         <source src="/public/labete.mp4">
       </video>
-      <button><i class="fa-solid fa-volume-off"></i></button>
     </div>
     <script>
       const videoIntro = document.getElementById("video-intro");
+      const introButton = document.getElementById("checkup-button");
+      const checkupDoor = document.getElementById("checkup-door");
+      const introContainer = document.getElementById("intro")
+
+      introButton.addEventListener("click", ()=>{
+        checkupDoor.style.display = "none";
+        introContainer.style.display = "flex";
+        videoIntro.play().catch(error=>{
+          console.error("La vidéo n'a pas pu démarrer")
+        })
+      }); 
 
       videoIntro.addEventListener("ended", ()=>{
           console.log("Vidéo d'introduction terminée.")
