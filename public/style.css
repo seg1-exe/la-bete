@@ -7,13 +7,13 @@
 
 body{
     background-color: var(--white);
-    font-family: Regional, serif;
+    font-family: LABETE, serif;
     color: var(--grey);
     overflow-x: hidden;
 }
 
 @font-face {
-    font-family: "Regional";
+    font-family: "LABETE";
     src: url(/public/Regional/Regional-ExtraLightCondensed.otf) format("opentype");
 }
 
