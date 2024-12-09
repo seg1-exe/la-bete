@@ -2,18 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/icon.png" />
-    <link rel="stylesheet" href="/src/reset.css">
-    <link rel="stylesheet" href="/src/style.css">
+    <link rel="icon" type="image/svg+xml" href="/icon.png" />
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/847debfb6c.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Bête</title>
   </head>
   <body>
+    <audio src="/public/songs/labete.mp3" autoplay></audio>
     <div id="intro">
-      <audio src="/public/songs/labete.mp3" autoplay></audio>
       <video id="video-intro" autoplay muted>
         <source src="/public/labete.mp4">
       </video>
+      <button><i class="fa-solid fa-volume-off"></i></button>
     </div>
     <script>
       const videoIntro = document.getElementById("video-intro");
