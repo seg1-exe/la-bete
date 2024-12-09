@@ -1,0 +1,230 @@
+*{
+    --grey: #383838;
+    --white: #FDFDFB;
+    --blue: #1C80D5;
+    --pink: #FC78A9;
+}
+
+body{
+    background-color: var(--white);
+    font-family: Regional, serif;
+    color: var(--grey);
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Regional";
+    src: url(/public/Regional/Regional-ExtraLightCondensed.otf) format("opentype");
+}
+
+h1{
+    font-size: 8rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+p{
+    font-size: 3rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--grey);
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.hover-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  bottom: 6px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.blue-link::before{
+  background-color: var(--blue);
+}
+
+.pink-link::before{
+    background-color: var(--pink);
+}
+
+.hover-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.bigImg{
+    width: 900px;
+    margin: 20px 0;
+}
+
+.midImg{
+    width: 700px;
+}
+
+.littleImg{
+    width: 500px;
+}
+
+.hidden{
+    display: none !important;
+}
+
+#intro{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#intro>video{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+}
+
+#app{
+    padding: 50px 80px;
+}
+
+.icon{
+    position: fixed;
+    left: 80px;
+}
+
+.icon>img{
+    width: 100px;
+}
+
+.top-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15rem;
+}
+
+.artwork-header{
+    margin-bottom: 5rem !important;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tracklist{
+    margin-bottom: 20rem;
+}
+
+.artwork{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+.artwork-gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.artwork-gallery>img{
+    margin: 5px;
+}
+
+.artwork-credits{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.artwork-credits>p{
+    margin-top: 20px;
+}
+
+.extern-link{
+    font-size: 2rem;
+}
+
+#holow-artwork{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#holow-artwork>img, #holow-artwork>video, #holow-artwork>h2{
+    width: 1280px;
+    margin: 15px;
+}
+
+#yev-header>.credits{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    width: 900px;
+}
+
+.navigation-container{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-right: 100vh;
+}
+
+.horizontal-section{
+    width: 100%;
+}
+
+.panel{
+    margin-right: 50px;
+    flex: 0 0 auto;
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/icon.png" />
+    <link rel="stylesheet" href="/src/reset.css">
+    <link rel="stylesheet" href="/src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Bête</title>
+  </head>
+  <body>
+    <div id="intro">
+      <video id="video-intro" autoplay>
+        <source src="/public/labete.mp4">
+      </video>
+    </div>
+    <script>
+      const videoIntro = document.getElementById("video-intro");
+
+      videoIntro.addEventListener("ended", ()=>{
+          console.log("Vidéo d'introduction terminée.")
+          window.location.href = '/pages/labete.html'
+      });
+    </script>
+  </body>
+</html>
