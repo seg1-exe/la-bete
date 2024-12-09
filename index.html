@@ -10,20 +10,14 @@
   </head>
   <body>
     <div id="intro">
-      <video id="video-intro">
+      <video id="video-intro" autoplay muted>
         <source src="/public/labete.mp4">
       </video>
+      <audio class="songs" src="/public/songs/labete.mp3" autoplay></audio>
     </div>
     <script>
-      
-
       const videoIntro = document.getElementById("video-intro");
-      window.addEventListener('load', () => {
-      videoIntro.play().catch(error => {
-        console.error("La vidéo n’a pas pu démarrer automatiquement :", error);
-        });
-      });
-      
+
       videoIntro.addEventListener("ended", ()=>{
           console.log("Vidéo d'introduction terminée.")
           window.location.href = '/labete.html'
