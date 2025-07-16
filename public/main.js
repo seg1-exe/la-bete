@@ -6,25 +6,25 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 });
 
-/* GSAP */
+/* GSAP 
+*/
 gsap.registerPlugin(ScrollTrigger);
 
-const container = document.querySelector(".navigation-container");
-const scrollDistance = container.scrollWidth - window.innerWidth;
+const container = document.querySelector(".kerning-artwork");
+const scrollDistance = container.scrollWidth - window.innerWidth + 200;
 console.log("scrollWidth:", container.scrollWidth, "windowWidth:", window.innerWidth, "scrollDistance:", scrollDistance);
 
 gsap.to(container, {
-x: -1000,
-ease: "none",
-scrollTrigger: {
-    trigger: ".horizontal-section",
-    start: "top top",
-    end: `+=${scrollDistance + 200}`, 
-    scrub: true,
-    pin: true,
-    pinSpacing: true,
-}
+    x: -scrollDistance,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".horizontal-section",
+      start: "center+=50 center",
+      end: `+=${scrollDistance}`,
+      scrub: true,
+      pin: true,
+      pinSpacing: true,
+    }
 });
-
 
 

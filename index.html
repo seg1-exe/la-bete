@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/images/icon.png" />
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/style.css">
     <script src="https://kit.fontawesome.com/847debfb6c.js" crossorigin="anonymous"></script>
@@ -14,15 +14,17 @@
       <button id="checkup-button">ENTER</button>
     </div>
     <div id="intro" style="display: none;">
+      <button id="skip-button">SKIP INTRO</button>
       <video id="video-intro">
-        <source src="/public/labete.mp4">
+        <source src="/public/images/trailer.mp4">
       </video>
     </div>
     <script>
       const videoIntro = document.getElementById("video-intro");
       const introButton = document.getElementById("checkup-button");
       const checkupDoor = document.getElementById("checkup-door");
-      const introContainer = document.getElementById("intro")
+      const introContainer = document.getElementById("intro");
+      const skipBtn = document.getElementById('skip-button');
 
       introButton.addEventListener("click", ()=>{
         checkupDoor.style.display = "none";
@@ -30,12 +32,20 @@
         videoIntro.play().catch(error=>{
           console.error("La vidéo n'a pas pu démarrer")
         })
-      }); 
+        setTimeout(function() {
+          skipBtn.classList.add('skip-btn-visible');
+        }, 3000);
+      });
 
       videoIntro.addEventListener("ended", ()=>{
           console.log("Vidéo d'introduction terminée.")
-          window.location.href = '/pages/labete.html'
+          window.location.href = '/labete.html'
       });
+
+      skipBtn.addEventListener("click", ()=>{
+        console.log("Vidéo d'introduction passée.")
+        window.location.href = '/labete.html'
+      })
     </script>
   </body>
 </html>
