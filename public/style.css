@@ -182,19 +182,12 @@ a:hover{
     justify-content: center;
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .artwork-header{
     margin-bottom: 5rem !important;
 }
 
 
-main{
+main, #app{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,7 +195,7 @@ main{
     width: 100%;
 }
 
-.reworked, .visuals, .fanbase, .tracklist.reworked>div{
+.reworked, .visuals, .fanbase, .tracklist.reworked>div, header{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -494,7 +487,7 @@ font-size: 20px;
     }
 
     footer{
-        padding-bottom: 50px;
+        padding-bottom: 150px;
     }
 }
 
