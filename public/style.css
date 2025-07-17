@@ -164,7 +164,7 @@ a:hover{
 }
 
 #app{
-    padding: 50px 80px;
+    padding: 20px 0;
 }
 
 .icon{
@@ -254,8 +254,11 @@ p.editorial{
 
 .holow-artwork{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .artwork-credits>p{
@@ -423,16 +426,52 @@ color: var(--grey);
 font-size: 20px;
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1200px){
+    h1{font-size: 6rem;}
+    h2{font-size: 3em;}
+    p{font-size: 2rem;}
+    p.editorial{font-size: 24px;}
 
+    .bigImg{
+        width: 600px;
+    }
+
+    .holow-artwork>img, .artwork-gallery>.bigImg{
+        width: 100%;
+    }
+    .artwork-gallery>.littleImg{
+        width: 40%;
+    }
+    .artwork-gallery>.midImg{
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 768px){
+    h1{font-size: 4rem;}
+    h2{font-size: 2em;}
+    p{font-size: 1.5rem;}
+    p.editorial{font-size: 20px; width: 70%;}
 
+    .bigImg{
+        width: 400px;
+    }
+
+    .player-ctn{
+        right: 0;
+        left: 0;
+    }
 }
 
 @media only screen and (max-width: 500px){
-
+    .kerning-artwork{
+        height: 70vh;
+    }
+    .panel {
+        flex: 0 0 auto;
+        width: 80vw;
+        margin-right: 10px;
+    }
 }
 
 @media only screen and (max-width: 320px){
