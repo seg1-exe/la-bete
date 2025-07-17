@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 gsap.registerPlugin(ScrollTrigger);
 
 const container = document.querySelector(".kerning-artwork");
-const scrollDistance = container.scrollWidth - window.innerWidth + 200;
+const scrollDistance = container.scrollWidth - window.innerWidth + 300;
 console.log("scrollWidth:", container.scrollWidth, "windowWidth:", window.innerWidth, "scrollDistance:", scrollDistance);
 
 gsap.to(container, {
