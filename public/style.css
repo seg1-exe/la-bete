@@ -258,6 +258,10 @@ p.editorial{
     justify-content: center;
 }
 
+.holow-artwork>img{
+    width: 50%;
+}
+
 .artwork-credits>p{
     margin-top: 20px;
 }
