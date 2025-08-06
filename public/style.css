@@ -304,6 +304,18 @@ footer>p{
     font-size: 2rem;
 }
 
+/* ANIMATIONS */
+.animated-section-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animated-section-bottom.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /*Music player*/
 #myProgress {
